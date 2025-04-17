@@ -54,23 +54,50 @@ export default function Home() {
                         About me
                     </h1>
                     <p className="mt-2 text-lg">
-                        Hi! My name is Denis Galetin, and I’m a Senior PHP Developer with over 6 years of experience
-                        building quality web applications. Over the years, I’ve learned to create reliable, scalable,
-                        and high-performance solutions that meet today’s technology standards.
+                        Hi! My name is Denis Galetin, and I’m a Senior PHP Developer with over 6 years
+                        of experience building quality web applications. I have been actively creating
+                        reliable, scalable, and high-performance solutions that meet today’s technology standards.
                     </p>
                     <p className="mt-2 text-lg">
-                        My work covers the entire development process — from the initial design of architectures to
-                        optimizing and maintaining existing systems. I’m good at finding practical solutions for complex
-                        problems by combining proven methods with new, creative approaches to coding.
+                    My work covers the entire development process — from the initial design of architectures
+                    to optimizing and maintaining existing systems. I’m always exploring new ideas and technologies.
+                    You can check out my work and projects on my{" "}
+                    <a
+                        href="https://github.com/dengaletin"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="underline text-blue-600 hover:text-blue-800 transition-colors"
+                    >
+                        GitHub
+                    </a>
+                    , connect with me on{" "}
+                    <a
+                        href="https://www.linkedin.com/in/galetin/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="underline text-blue-600 hover:text-blue-800 transition-colors"
+                    >
+                        LinkedIn
+                    </a>
+                    , or drop me a message on{" "}
+                    <a
+                        href="https://t.me/frescojacq"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="underline text-blue-600 hover:text-blue-800 transition-colors"
+                    >
+                        Telegram
+                    </a>
+                    .
+                </p>
+                    <p className="mt-2 text-lg">
+                        I enjoy diving deep into technology, exploring new tools, and improving workflows so that every line
+                        of code makes a difference. This approach helps me solve problems effectively and build software products
+                        that keep up with the ever-changing tech world.
                     </p>
                     <p className="mt-2 text-lg">
-                        I enjoy diving deep into technology, exploring new tools, and improving workflows so that every
-                        line of code makes a difference. This method not only helps me solve problems but also lets me
-                        build software products that keep up with the ever-changing tech world.
-                    </p>
-                    <p className="mt-2 text-lg">
-                        If you’re looking for someone with hands-on experience and deep knowledge of PHP development,
-                        I’m always ready to share more details and new ideas.
+                        If you’d like to know more or discuss a potential project, feel free to reach out through any of the
+                        platforms mentioned above.
                     </p>
                 </div>
             </section>
@@ -84,7 +111,7 @@ export default function Home() {
                             key={index}
                             className="flex flex-col sm:flex-row items-start gap-4 p-4 rounded border border-gray-200 shadow-sm"
                         >
-                            <div className="flex-shrink-0">
+                            <div className="flex-shrink-0 w-16 h-16 relative">
                                 <Image
                                     src={exp.companyLogo}
                                     alt={`${exp.companyName} logo`}
