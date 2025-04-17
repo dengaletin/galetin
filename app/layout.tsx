@@ -16,7 +16,39 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
     title: "Denis Galetin — Home",
-    description: "Transforming Code into Success: Insights from Senior PHP Developer Denis Galetin",
+    description:
+        "Transforming Code into Success: Insights from Senior PHP Developer Denis Galetin",
+    openGraph: {
+        title: "Denis Galetin — Home",
+        description:
+            "Transforming Code into Success: Insights from Senior PHP Developer Denis Galetin",
+        url: "https://galetin.com",
+        siteName: "Denis Galetin",
+        images: [
+            {
+                url: "https://galetin.com/images/preview-image.jpg",
+                width: 1200,
+                height: 630,
+                alt: "Denis Galetin Preview Image",
+            },
+        ],
+        locale: "en_US",
+        type: "website",
+    },
+    robots: {
+        index: true,
+        follow: true,
+        googleBot: {
+            index: true,
+            follow: true,
+            "max-video-preview": -1,
+            "max-image-preview": "large",
+            "max-snippet": -1,
+        },
+    },
+    alternates: {
+        canonical: "https://galetin.com",
+    },
 };
 
 export default function RootLayout({children}: { children: React.ReactNode; }) {
