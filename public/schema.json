@@ -1,0 +1,52 @@
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Denis Galetin",
+  "jobTitle": "Senior Backend Developer",
+  "description": "Senior Backend Developer with 6+ years of experience specializing in PHP and Go development",
+  "url": "https://galetin.com",
+  "image": "https://galetin.com/images/avatar.jpg",
+  "sameAs": [
+    "https://github.com/dengaletin",
+    "https://www.linkedin.com/in/galetin/",
+    "https://t.me/frescojacq"
+  ],
+  "knowsAbout": [
+    "PHP Development",
+    "Go Programming",
+    "Golang",
+    "Microservices Architecture",
+    "API Development",
+    "Database Optimization",
+    "Team Leadership",
+    "DevOps",
+    "Docker",
+    "Kubernetes",
+    "MySQL",
+    "PostgreSQL",
+    "Redis",
+    "Laravel",
+    "Symfony"
+  ],
+  "worksFor": {
+    "@type": "Organization",
+    "name": "Ltd. Venson"
+  },
+  "hasOccupation": {
+    "@type": "Occupation",
+    "name": "Senior Backend Developer",
+    "occupationLocation": {
+      "@type": "Country",
+      "name": "Remote"
+    },
+    "skills": [
+      "PHP Development",
+      "Go Programming",
+      "Microservices",
+      "API Design",
+      "Database Architecture",
+      "Team Leadership"
+    ]
+  }
+}
+
