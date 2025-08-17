@@ -104,14 +104,14 @@ export default function Home() {
                         About me
                     </h1>
                     <p className="mt-2 text-lg">
-                        Hi! My name is Denis Galetin, and I'm a Senior Backend Developer with 6+ years
+                        Hi! My name is Denis Galetin, and I&apos;m a Senior Backend Developer with 6+ years
                         of experience specializing in <strong>PHP</strong> and <strong>Go</strong>. I build
                         high-performance, scalable web applications that handle millions of requests daily.
                     </p>
                     <p className="mt-2 text-lg">
                         My expertise spans the entire backend ecosystem — from architecting microservices
                         and optimizing database performance to implementing CI/CD pipelines and leading
-                        development teams. I've successfully migrated legacy PHP systems to modern Go
+                        development teams. I&apos;ve successfully migrated legacy PHP systems to modern Go
                         microservices, achieving significant performance improvements and cost reductions.
                     </p>
                     <p className="mt-2 text-lg">
@@ -145,8 +145,8 @@ export default function Home() {
                         .
                     </p>
                     <p className="mt-2 text-lg">
-                        I'm passionate about solving complex technical challenges, mentoring teams,
-                        and building systems that make a real business impact. Let's discuss how
+                        I&apos;m passionate about solving complex technical challenges, mentoring teams,
+                        and building systems that make a real business impact. Let&apos;s discuss how
                         I can contribute to your next big project.
                     </p>
 
