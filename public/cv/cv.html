@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Denis Galetin — Senior Backend Developer CV</title>
+    <style>
+        @page {
+            size: A4;
+            margin: 10mm 14mm;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.4;
+            color: #1a1a1a;
+            background: white;
+            font-size: 11px;
+        }
+
+        .container {
+            max-width: 100%;
+            margin: 0;
+            padding: 0;
+            background: white;
+        }
+
+        /* ── HEADER ── */
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 10px;
+            padding-bottom: 8px;
+            border-bottom: 2px solid #2563eb;
+            gap: 16px;
+        }
+
+        .header-left .name {
+            font-size: 22px;
+            font-weight: 700;
+            color: #1e40af;
+            letter-spacing: -0.5px;
+            line-height: 1.1;
+        }
+
+        .header-left .role {
+            font-size: 12px;
+            color: #475569;
+            margin-top: 2px;
+            font-weight: 500;
+        }
+
+        .header-right {
+            text-align: right;
+            font-size: 10px;
+            color: #374151;
+            line-height: 1.7;
+            flex-shrink: 0;
+        }
+
+        .header-right a {
+            color: #2563eb;
+            text-decoration: none;
+        }
+
+        /* ── SECTION ── */
+        .section {
+            margin-bottom: 10px;
+        }
+
+        .section-title {
+            font-size: 11px;
+            font-weight: 700;
+            color: #1e40af;
+            text-transform: uppercase;
+            letter-spacing: 0.6px;
+            margin-bottom: 5px;
+            padding-bottom: 2px;
+            border-bottom: 1px solid #dbeafe;
+        }
+
+        /* ── SUMMARY ── */
+        .summary p {
+            margin-bottom: 2px;
+            color: #374151;
+            line-height: 1.45;
+            font-size: 10.5px;
+        }
+
+        /* ── SOFT SKILLS ── */
+        .soft-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4px 20px;
+        }
+
+        .soft-item strong {
+            color: #1e40af;
+            display: inline;
+            font-size: 10.5px;
+        }
+
+        .soft-item span {
+            color: #4b5563;
+            font-size: 10.5px;
+            line-height: 1.4;
+        }
+
+        /* ── EXPERIENCE ── */
+        .exp-item {
+            margin-bottom: 8px;
+            padding-bottom: 7px;
+            border-bottom: 1px solid #f1f5f9;
+        }
+
+        .exp-item:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+
+        .exp-header {
+            margin-bottom: 1px;
+        }
+
+        .exp-meta {
+            display: flex;
+            align-items: baseline;
+            gap: 6px;
+            flex-wrap: wrap;
+        }
+
+        .exp-company {
+            font-size: 11.5px;
+            font-weight: 700;
+            color: #111827;
+        }
+
+        .exp-location {
+            font-size: 10px;
+            color: #9ca3af;
+            font-weight: 400;
+            margin-left: 5px;
+        }
+
+        .exp-position {
+            font-size: 10.5px;
+            font-weight: 600;
+            color: #2563eb;
+            margin-bottom: 1px;
+        }
+
+        .exp-dates {
+            font-size: 10px;
+            color: #6b7280;
+            font-style: italic;
+            white-space: nowrap;
+        }
+
+        .exp-achievements {
+            margin-top: 3px;
+            padding-left: 0;
+            list-style: none;
+        }
+
+        .exp-achievements li {
+            position: relative;
+            padding-left: 12px;
+            margin-bottom: 1px;
+            color: #374151;
+            font-size: 10.5px;
+            line-height: 1.4;
+        }
+
+        .exp-achievements li::before {
+            content: "▸";
+            position: absolute;
+            left: 0;
+            color: #16a34a;
+            font-size: 9px;
+            top: 1px;
+        }
+
+        /* ── SKILL TAGS ── */
+        .skill-tag {
+            display: inline-block;
+            background: #eff6ff;
+            color: #1e40af;
+            border: 1px solid #bfdbfe;
+            padding: 1px 7px;
+            border-radius: 3px;
+            font-size: 10px;
+            font-weight: 500;
+        }
+
+        /* ── EDUCATION ── */
+        .edu-row {
+            display: flex;
+            align-items: baseline;
+            gap: 6px;
+        }
+
+        .edu-degree {
+            font-weight: 600;
+            color: #111827;
+            font-size: 11px;
+        }
+
+        .edu-year {
+            color: #6b7280;
+            font-size: 10px;
+            font-style: italic;
+        }
+
+        /* ── PRINT ── */
+        @media print {
+            @page {
+                margin: 8mm 12mm 8mm 10mm;
+                size: A4;
+            }
+
+            body { font-size: 11px; }
+
+            .container {
+                padding: 0;
+                max-width: none;
+            }
+
+            .exp-item {
+                break-inside: avoid;
+            }
+
+            a {
+                color: inherit !important;
+                text-decoration: none !important;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+
+    <!-- HEADER -->
+    <div class="header">
+        <div class="header-left">
+            <div class="name">Denis Galetin</div>
+            <div class="role">Senior Backend Developer · PHP &amp; Go</div>
+        </div>
+        <div class="header-right">
+            <div>📍 Tbilisi, Georgia · Remote</div>
+            <div>✉️ <a href="mailto:denis@galetin.dev">denis@galetin.dev</a></div>
+            <div>💬 <a href="https://t.me/frescojacq">t.me/frescojacq</a></div>
+            <div>💻 <a href="https://github.com/dengaletin">github.com/dengaletin</a></div>
+            <div>🔗 <a href="https://linkedin.com/in/galetin">linkedin.com/in/galetin</a></div>
+        </div>
+    </div>
+
+    <!-- PROFESSIONAL SUMMARY -->
+    <div class="section">
+        <div class="section-title">Professional Summary</div>
+        <div class="summary">
+            <p>Backend developer with <strong>9+ years in PHP</strong> and <strong>4 in Go</strong>, with a background in Information Security. I design and scale high-load payment systems and financial services.</p>
+            <p>I lead architecture, improve critical performance, and establish development processes. I launch projects from scratch and scale existing solutions for growth.</p>
+            <p>Based in Tbilisi, Georgia. Open to full-time remote positions.</p>
+        </div>
+    </div>
+
+    <!-- TECHNICAL SKILLS -->
+    <div class="section">
+        <div class="section-title">Technical Skills</div>
+        <div style="display:flex;flex-wrap:wrap;gap:6px;">
+            <span class="skill-tag">PHP (9+ years)</span>
+            <span class="skill-tag">Go / Golang (4 years)</span>
+            <span class="skill-tag">Laravel</span>
+            <span class="skill-tag">Symfony</span>
+            <span class="skill-tag">MySQL</span>
+            <span class="skill-tag">PostgreSQL</span>
+            <span class="skill-tag">Redis</span>
+            <span class="skill-tag">Microservices</span>
+            <span class="skill-tag">REST APIs</span>
+            <span class="skill-tag">Docker</span>
+            <span class="skill-tag">Kubernetes</span>
+            <span class="skill-tag">CI/CD</span>
+            <span class="skill-tag">RabbitMQ</span>
+            <span class="skill-tag">Linux</span>
+            <span class="skill-tag">AWS</span>
+            <span class="skill-tag">Azure</span>
+            <span class="skill-tag">SOLID / Design Patterns</span>
+            <span class="skill-tag">PHPUnit</span>
+            <span class="skill-tag">Git</span>
+        </div>
+    </div>
+
+    <!-- SOFT SKILLS -->
+    <div class="section">
+        <div class="section-title">Soft Skills</div>
+        <div class="soft-grid">
+            <div class="soft-item">
+                <strong>People &amp; Communication</strong>
+                <span>Keep communication transparent with teams and stakeholders, document decisions, share status and risks clearly</span>
+            </div>
+            <div class="soft-item">
+                <strong>Ownership &amp; Reliability</strong>
+                <span>Take ownership of service stability and outcomes. Reliability, predictability, and user trust are the priority</span>
+            </div>
+            <div class="soft-item">
+                <strong>Organization &amp; Planning</strong>
+                <span>Plan work, estimate timelines and risks, maintain a steady delivery cadence</span>
+            </div>
+            <div class="soft-item">
+                <strong>Adaptability</strong>
+                <span>Quickly learn new technologies and adopt modern approaches when they improve product quality</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- PROFESSIONAL EXPERIENCE -->
+    <div class="section">
+        <div class="section-title">Professional Experience</div>
+
+        <!-- Venson -->
+        <div class="exp-item">
+            <div class="exp-header">
+                <div class="exp-company">Venson Ltd. <span class="exp-location">Cyprus</span></div>
+                <div class="exp-meta">
+                    <span class="exp-position">Senior Backend Developer (PHP/Go)</span>
+                    <span class="exp-dates">· Jul 2023 — Present</span>
+                </div>
+            </div>
+            <ul class="exp-achievements">
+                <li>Led monolith-to-microservices migration: extracted deposits and withdrawals services, reducing deployment time from 2 hours to 15 minutes. Continuing architectural decomposition in a team of 5 backend developers</li>
+                <li>Design system architecture, document technical decisions, and conduct code reviews. Mentor 2 middle developers, help with architectural decisions</li>
+                <li>Develop payment APIs for financial services</li>
+                <li>Configure CI/CD pipelines to automate deployment and testing. Manage Kubernetes clusters on AWS for production workloads</li>
+                <li>Write unit and integration tests for critical services, set up monitoring and alerting. Achieved 99.8% uptime SLA for payment services through systematic reliability improvements and incident response processes</li>
+                <li>Optimize slow SQL queries: reduced reporting query execution time from 8 seconds to 200 ms, enabling real-time reports for 200k+ users</li>
+                <li>Refactor legacy code, apply SOLID principles and design patterns</li>
+                <li>Develop internal tools to automate team's routine tasks</li>
+            </ul>
+        </div>
+
+        <!-- eLogy -->
+        <div class="exp-item">
+            <div class="exp-header">
+                <div class="exp-company">eLogy <span class="exp-location">Rome, Italy</span></div>
+                <div class="exp-meta">
+                    <span class="exp-position">Senior Backend Developer (PHP/Go)</span>
+                    <span class="exp-dates">· Apr 2022 — Jul 2023</span>
+                </div>
+            </div>
+            <ul class="exp-achievements">
+                <li>Built backend for a logistics SaaS platform processing 5k+ orders daily. Team of 4 developers</li>
+                <li>Extracted authentication into a separate Go microservice</li>
+                <li>Normalized the database: migrated legacy tables without foreign keys to new schema with FK constraints</li>
+                <li>Implemented an alternative payments module with multiple provider integrations</li>
+                <li>Built push notifications microservice for shipment status with Firebase integration</li>
+                <li>Initiated PHP modernization (5.6 → 7.4): resolved 15k lines of technical debt, introduced strict typing and type hints. Established migration roadmap toward PHP 8.x</li>
+            </ul>
+        </div>
+
+        <!-- Albato -->
+        <div class="exp-item">
+            <div class="exp-header">
+                <div class="exp-company">Albato <span class="exp-location">Setúbal, Portugal</span></div>
+                <div class="exp-meta">
+                    <span class="exp-position">PHP Developer (contract)</span>
+                    <span class="exp-dates">· Jun 2021 — Apr 2022</span>
+                </div>
+            </div>
+            <ul class="exp-achievements">
+                <li>Worked on integration platform backend connecting 200+ third-party services, processing 50k+ API requests daily for 3k+ active business clients</li>
+                <li>Built PHP worker system for asynchronous processing of CPU-intensive automation tasks, accelerated automation execution by 60% through parallelization</li>
+                <li>Optimized database architecture and slow queries, improving response times for critical endpoints</li>
+            </ul>
+        </div>
+
+        <!-- Paykassma -->
+        <div class="exp-item">
+            <div class="exp-header">
+                <div class="exp-company">Paykassma <span class="exp-location">Worldwide</span></div>
+                <div class="exp-meta">
+                    <span class="exp-position">PHP Developer</span>
+                    <span class="exp-dates">· Feb 2019 — Jun 2021</span>
+                </div>
+            </div>
+            <ul class="exp-achievements">
+                <li>Worked across two product teams within Paykassma's company group over 2+ years: launched on the gateway product team, then moved to the core fintech platform — taking on broader ownership of payment infrastructure</li>
+                <li>Developed payment gateway backend with embeddable iframe widget; integrated multiple payment providers through a unified API gateway with retry and webhook notification system for payment statuses</li>
+                <li>Set up transaction table partitioning by dates: split a 50M+ record table into monthly partitions, automated archiving of data older than 6 months — eliminating performance degradation as data grew</li>
+                <li>Integrated payment gateway with multiple banks and processing centers; developed internal API for transactions and user balance management</li>
+                <li>Optimized SQL queries and database structure: refactored transactional queries, added indexes on frequently accessed fields, reduced response time from 2–3 seconds to 100–150 ms</li>
+                <li>Covered critical financial operations with tests, implemented automated e2e testing</li>
+                <li>Set up transaction monitoring and alerting for payment anomalies</li>
+                <li>Optimized payment processing pipeline: eliminated redundant logic and unnecessary DB round-trips, improving throughput under load</li>
+            </ul>
+        </div>
+
+        <!-- Freelance -->
+        <div class="exp-item">
+            <div class="exp-header">
+                <div class="exp-company">Freelance &amp; Startup Projects</div>
+                <div class="exp-meta">
+                    <span class="exp-position">Freelance PHP Developer / Startup Projects</span>
+                    <span class="exp-dates">· Jan 2017 — Feb 2019</span>
+                </div>
+            </div>
+            <ul class="exp-achievements">
+                <li>Developed web applications and payment integrations for small businesses and startups</li>
+                <li>Worked directly with clients: gathered requirements, designed solutions, maintained launched projects</li>
+                <li>Managed full project lifecycle independently: provisioned Linux VPS environments, configured Nginx, MySQL, and PHP-FPM from scratch, handled deployments and production support</li>
+                <li>Participated in a startup project in the online payments space, gained first experience with high-load systems</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- EDUCATION -->
+    <div class="section">
+        <div class="section-title">Education</div>
+        <div class="edu-row">
+            <div class="edu-degree">Specialist in Information Security</div>
+            <div class="edu-year">&middot; Graduated 2016</div>
+        </div>
+    </div>
+
+</div>
+</body>
+</html>
