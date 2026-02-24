@@ -16,6 +16,7 @@ export default function Header() {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     const [isLangMenuOpen, setIsLangMenuOpen] = useState(false);
     const langMenuRef = useRef<HTMLDivElement>(null);
+    const mobileLangRef = useRef<HTMLDivElement>(null);
     const t = useTranslations("Header");
     const locale = useLocale();
     const pathname = usePathname();
@@ -34,7 +35,10 @@ export default function Header() {
         if (!isLangMenuOpen) return;
 
         const handleClickOutside = (event: MouseEvent) => {
-            if (!langMenuRef.current?.contains(event.target as Node)) {
+            if (
+                !langMenuRef.current?.contains(event.target as Node) &&
+                !mobileLangRef.current?.contains(event.target as Node)
+            ) {
                 setIsLangMenuOpen(false);
             }
         };
@@ -103,6 +107,7 @@ export default function Header() {
                     </div>
 
                     <div className="md:hidden ml-auto flex items-center gap-2">
+                        <div ref={mobileLangRef} className="relative">
                         <button
                             onClick={() => setIsLangMenuOpen(!isLangMenuOpen)}
                             className="flex items-center gap-2 px-2 py-2 hover:bg-gray-100 rounded-lg transition-colors cursor-pointer"
@@ -110,6 +115,12 @@ export default function Header() {
                         >
                             <span className="text-sm font-medium text-gray-700">{currentLang.label}</span>
                         </button>
+                        {isLangMenuOpen && (
+                            <div className="absolute right-0 top-full mt-1 min-w-[4rem] bg-white rounded-lg border border-gray-200 py-0.5 z-50 shadow-lg">
+                                {renderLanguageLinks(() => setIsLangMenuOpen(false))}
+                            </div>
+                        )}
+                        </div>
                         <button
                             onClick={() => setIsMenuOpen(!isMenuOpen)}
                             className="p-2 hover:bg-gray-100 rounded-lg transition-colors cursor-pointer"
@@ -119,12 +130,6 @@ export default function Header() {
                         </button>
                     </div>
                 </div>
-
-                {isLangMenuOpen && (
-                    <div className="md:hidden mt-2 pt-2 border-t border-gray-200">
-                        <div className="flex flex-col gap-0.5">{renderLanguageLinks(() => setIsLangMenuOpen(false))}</div>
-                    </div>
-                )}
 
                 {isMenuOpen && (
                     <div className="md:hidden mt-4 pt-4 border-t border-gray-200">
