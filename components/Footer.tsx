@@ -1,5 +1,6 @@
 import { FaGithub, FaLinkedin, FaTelegram } from "react-icons/fa";
 import { SOCIAL_LINKS } from "../constants/links";
+import BuyMeCoffeeButton from "./BuyMeCoffeeButton";
 
 const SOCIAL_ICONS = [
     { href: SOCIAL_LINKS.GITHUB, Icon: FaGithub, label: "GitHub" },
@@ -10,7 +11,7 @@ const SOCIAL_ICONS = [
 export default function Footer() {
     return (
         <footer className="w-full mt-12 p-4 text-center">
-            <div className="flex justify-center items-center gap-4">
+            <div className="flex justify-center items-center gap-4 flex-wrap">
                 {SOCIAL_ICONS.map(({ href, Icon, label }) => (
                     <a
                         key={label}
@@ -23,6 +24,7 @@ export default function Footer() {
                         <Icon />
                     </a>
                 ))}
+                <BuyMeCoffeeButton />
             </div>
         </footer>
     );
