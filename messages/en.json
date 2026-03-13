@@ -100,13 +100,5 @@
     "freelanceAch2": "Worked directly with clients: gathered requirements, designed solutions, maintained launched projects",
     "freelanceAch3": "Managed full project lifecycle independently: provisioned Linux VPS environments, configured Nginx, MySQL, and PHP-FPM from scratch, handled deployments and production support",
     "freelanceAch4": "Participated in a startup project in the online payments space, gained first experience with high-load systems"
-  },
-  "Education": {
-    "title": "Education",
-    "university": "North Caucasus Federal University",
-    "location": "Stavropol, Russia",
-    "degree": "Specialist Degree (5 years)",
-    "field": "Information Security of Automated Systems",
-    "year": "2016"
   }
 }
