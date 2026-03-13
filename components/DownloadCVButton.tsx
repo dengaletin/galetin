@@ -11,9 +11,9 @@ export default function DownloadCVButton() {
         <a
             href={CV_PATH}
             download={CV_DOWNLOAD_NAME}
-            className="inline-flex items-center gap-2 px-6 py-3 rounded-lg border border-gray-200 hover:border-blue-300 transition-colors cursor-pointer"
+            className="inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-blue-600 hover:bg-blue-700 text-white font-medium transition-colors cursor-pointer shadow-sm"
         >
-            <Download className="w-5 h-5" />
+            <Download className="w-4 h-4" />
             {t('button')}
         </a>
     );

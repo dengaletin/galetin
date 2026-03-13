@@ -15,11 +15,12 @@
   "About": {
     "name": "Denis Galetin",
     "role": "Senior Backend Developer | PHP & Go",
+    "experience": "9+ years of experience",
     "title": "About me",
     "imageAlt": "Denis Galetin - Senior Backend Developer | PHP & Go",
     "p1": "Backend developer with 9+ years in PHP and 4 in Go, with a background in Information Security. I design and scale high-load payment systems and financial services",
     "p2": "I lead architecture, improve critical performance, and establish development processes. I launch projects from scratch and scale existing solutions for growth",
-    "p3": "Based in Tbilisi, Georgia. Open to full-time remote positions. Contact me to discuss your project context and goals",
+    "p3": "Based in Tbilisi, Georgia. Contact me to discuss your project context and goals",
     "contactTitle": "Contact",
     "locationValue": "Tbilisi, Georgia",
     "remoteAvailable": "Remote",
@@ -61,6 +62,10 @@
   "Experience": {
     "title": "Professional Experience",
     "present": "Present",
+    "ieTitle": "Denis Galetin IE",
+    "ieLocation": "Tbilisi, Georgia",
+    "ieSubtitle": "Individual Entrepreneur",
+    "contractLabel": "Service Contract",
     "vensonPosition": "Senior Backend Developer (PHP/Go)",
     "vensonAch1": "Led monolith-to-microservices migration: extracted deposits and withdrawals services, reducing deployment time from 2 hours to 15 minutes. Continuing architectural decomposition in a team of 5 backend developers",
     "vensonAch2": "Design system architecture, document technical decisions, and conduct code reviews. Mentor 2 middle developers, help with architectural decisions",
@@ -82,9 +87,9 @@
     "albatoAch2": "Built PHP worker system for asynchronous processing of CPU-intensive automation tasks, accelerated automation execution by 60% through parallelization",
     "albatoAch3": "Optimized database architecture and slow queries, improving response times for critical endpoints",
     "paykassmaPosition": "PHP Developer",
-    "paykassmaAch1": "Worked across two product teams within Paykassma's company group over 2+ years: launched on the gateway product team, then moved to the core fintech platform — taking on broader ownership of payment infrastructure",
+    "paykassmaAch1": "Worked across two product teams within Paykassma's company group over 2+ years: launched on the gateway product team, then moved to the core fintech platform - taking on broader ownership of payment infrastructure",
     "paykassmaAch2": "Developed payment gateway backend with embeddable iframe widget; integrated multiple payment providers through a unified API gateway with retry and webhook notification system for payment statuses",
-    "paykassmaAch3": "Set up transaction table partitioning by dates: split a 50M+ record table into monthly partitions, automated archiving of data older than 6 months — eliminating performance degradation as data grew",
+    "paykassmaAch3": "Set up transaction table partitioning by dates: split a 50M+ record table into monthly partitions, automated archiving of data older than 6 months - eliminating performance degradation as data grew",
     "paykassmaAch4": "Integrated payment gateway with multiple banks and processing centers; developed internal API for transactions and user balance management",
     "paykassmaAch5": "Optimized SQL queries and database structure: refactored transactional queries, added indexes on frequently accessed fields, reduced response time from 2-3 seconds to 100-150 ms",
     "paykassmaAch6": "Covered critical financial operations with tests, implemented automated e2e testing",
@@ -95,5 +100,13 @@
     "freelanceAch2": "Worked directly with clients: gathered requirements, designed solutions, maintained launched projects",
     "freelanceAch3": "Managed full project lifecycle independently: provisioned Linux VPS environments, configured Nginx, MySQL, and PHP-FPM from scratch, handled deployments and production support",
     "freelanceAch4": "Participated in a startup project in the online payments space, gained first experience with high-load systems"
+  },
+  "Education": {
+    "title": "Education",
+    "university": "North Caucasus Federal University",
+    "location": "Stavropol, Russia",
+    "degree": "Specialist Degree (5 years)",
+    "field": "Information Security of Automated Systems",
+    "year": "2016"
   }
 }

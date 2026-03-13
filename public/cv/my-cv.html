@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Denis Galetin – CV</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Segoe UI', system-ui, -apple-system, Arial, sans-serif;
+      font-size: 13px;
+      line-height: 1.6;
+      color: #111827;
+      background: #ffffff;
+      padding: 40px 52px;
+      max-width: 920px;
+      margin: 0 auto;
+    }
+
+    a { color: #2563eb; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    .header-card {
+      border: 1px solid #e5e7eb;
+      border-radius: 16px;
+      padding: 24px 28px;
+      margin-bottom: 28px;
+    }
+    .header-top {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+      margin-bottom: 20px;
+    }
+    .avatar {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      object-fit: cover;
+      flex-shrink: 0;
+      outline: 5px solid #fff;
+      box-shadow: 0 0 0 1px #bfdbfe;
+    }
+    .header-name h1 {
+      font-size: 28px;
+      font-weight: 700;
+      color: #111827;
+      letter-spacing: -0.4px;
+      line-height: 1.2;
+    }
+    .header-name .role {
+      font-size: 15px;
+      color: #4b5563;
+      font-weight: 500;
+      margin-top: 3px;
+    }
+    .header-name .exp {
+      font-size: 12px;
+      color: #9ca3af;
+      margin-top: 2px;
+    }
+
+    .about-text p {
+      color: #374151;
+      font-size: 13px;
+      margin-bottom: 6px;
+    }
+    .about-text p:last-child { margin-bottom: 0; }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 6px 16px;
+      margin-top: 16px;
+      padding-top: 16px;
+      border-top: 1px solid #f3f4f6;
+    }
+    .contact-item {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 12px;
+      color: #6b7280;
+    }
+    .contact-item svg {
+      width: 14px;
+      height: 14px;
+      flex-shrink: 0;
+      stroke: #9ca3af;
+      fill: none;
+      stroke-width: 2;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
+    section { margin-bottom: 24px; }
+    h2 {
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: #6b7280;
+      margin-bottom: 14px;
+    }
+
+    .exp-entry {
+      border: 1px solid #e5e7eb;
+      border-radius: 10px;
+      padding: 14px 16px;
+      margin-bottom: 12px;
+    }
+    .exp-entry:last-child { margin-bottom: 0; }
+    .exp-row { display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap; gap: 2px; }
+    .exp-company { font-weight: 700; font-size: 14px; color: #111827; }
+    .exp-dates { font-size: 11px; color: #9ca3af; white-space: nowrap; }
+    .exp-location { font-size: 11px; color: #9ca3af; margin-bottom: 3px; }
+    .exp-position { font-size: 13px; color: #2563eb; font-weight: 600; margin: 3px 0 8px; }
+
+    ul.ach { list-style: none; padding: 0; display: flex; flex-direction: column; gap: 4px; }
+    ul.ach li {
+      padding-left: 14px;
+      position: relative;
+      color: #374151;
+      font-size: 12.5px;
+      line-height: 1.5;
+    }
+    ul.ach li::before {
+      content: '';
+      position: absolute;
+      left: 2px;
+      top: 7px;
+      width: 6px;
+      height: 6px;
+      background: #16a34a;
+      border-radius: 50%;
+    }
+
+    .ie-wrapper {
+      border: 1px solid #e5e7eb;
+      border-radius: 10px;
+      padding: 14px 16px;
+      margin-bottom: 12px;
+    }
+    .ie-top { display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap; gap: 2px; }
+    .ie-name { font-weight: 700; font-size: 14px; color: #111827; }
+    .ie-dates { font-size: 11px; color: #9ca3af; }
+    .ie-sub { font-size: 12px; color: #2563eb; font-weight: 600; margin: 2px 0 2px; }
+    .ie-loc { font-size: 11px; color: #9ca3af; margin-bottom: 2px; }
+    .ie-contracts {
+      border-left: 2px solid #e5e7eb;
+      padding-left: 14px;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+    .contract-company { font-weight: 700; font-size: 13px; color: #111827; }
+    .contract-meta { font-size: 11px; color: #9ca3af; margin-bottom: 2px; }
+    .contract-pos { font-size: 12.5px; color: #2563eb; font-weight: 600; margin-bottom: 6px; }
+
+    .skills-wrap { display: flex; flex-wrap: wrap; gap: 7px; margin-bottom: 14px; }
+    .skill-tag {
+      border: 1px solid #e5e7eb;
+      border-radius: 8px;
+      padding: 4px 10px;
+      font-size: 12px;
+      font-weight: 500;
+      color: #374151;
+      background: #fff;
+    }
+
+    .tech-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 7px 28px;
+    }
+    .tech-item { display: flex; gap: 8px; }
+    .tech-name { font-weight: 600; min-width: 88px; flex-shrink: 0; color: #111827; font-size: 12.5px; }
+    .tech-desc { color: #6b7280; font-size: 12px; }
+
+    .soft-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 8px 28px; }
+    .soft-title { font-weight: 600; font-size: 12.5px; color: #111827; }
+    .soft-desc { font-size: 12px; color: #6b7280; }
+
+    .edu-entry {
+      border: 1px solid #e5e7eb;
+      border-radius: 10px;
+      padding: 14px 16px;
+    }
+    .edu-row { display: flex; justify-content: space-between; align-items: baseline; }
+    .edu-uni { font-weight: 700; font-size: 14px; color: #111827; }
+    .edu-year { font-size: 11px; color: #9ca3af; }
+    .edu-loc { font-size: 11px; color: #9ca3af; margin-bottom: 4px; }
+    .edu-field { font-size: 13px; color: #2563eb; font-weight: 600; }
+    .edu-degree { font-size: 12px; color: #6b7280; margin-top: 1px; }
+
+    @page { size: A4; margin: 12mm 13mm; }
+    @media print {
+      body { padding: 0; font-size: 11px; line-height: 1.4; }
+      .header-card { break-inside: avoid; margin-bottom: 16px; }
+      .header-card, .header-top { gap: 16px; }
+      .avatar { width: 76px; height: 76px; }
+      .header-name h1 { font-size: 22px; }
+      section { margin-bottom: 14px; }
+      .ie-contracts > div { break-inside: avoid; }
+      .exp-entry { break-inside: avoid; }
+      .edu-entry { break-inside: avoid; }
+      .soft-grid > div { break-inside: avoid; }
+      .section-page-break { break-before: page; }
+      .ie-wrapper { margin-bottom: 8px; }
+      .exp-entry { margin-bottom: 8px; padding: 10px 12px; }
+      .ie-wrapper { padding: 10px 12px; }
+      ul.ach { gap: 2px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="header-card">
+    <div class="header-top">
+      <img class="avatar" src="./public/images/avatar.jpg" alt="Denis Galetin" />
+      <div class="header-name">
+        <h1>Denis Galetin</h1>
+        <div class="role">Senior Backend Developer | PHP &amp; Go</div>
+        <div class="exp">9+ years of experience</div>
+      </div>
+    </div>
+    <div class="about-text">
+      <p>Backend developer with 9+ years in PHP and 4 in Go, with a background in Information Security. I design and scale high-load payment systems and financial services.</p>
+      <p>I lead architecture, improve critical performance, and establish development processes. I launch projects from scratch and scale existing solutions for growth.</p>
+      <p>Based in Tbilisi, Georgia. Contact me to discuss your project context and goals.</p>
+    </div>
+    <div class="contact-grid">
+      <div class="contact-item">
+        <svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+        Tbilisi, Georgia
+      </div>
+      <div class="contact-item">
+        <svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+        <a href="mailto:denis@galetin.dev">denis@galetin.dev</a>
+      </div>
+      <div class="contact-item">
+        <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+        <a href="https://galetin.dev">galetin.dev</a>
+      </div>
+      <div class="contact-item">
+        <svg viewBox="0 0 24 24"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+        <a href="https://t.me/frescojacq">Telegram</a>
+      </div>
+      <div class="contact-item">
+        <svg viewBox="0 0 24 24"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+        <a href="https://github.com/dengaletin">GitHub</a>
+      </div>
+      <div class="contact-item">
+        <svg viewBox="0 0 24 24"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+        <a href="https://www.linkedin.com/in/galetin/">LinkedIn</a>
+      </div>
+    </div>
+  </div>
+  <section>
+    <h2>Professional Experience</h2>
+    <div class="ie-wrapper">
+      <div class="ie-top">
+        <span class="ie-name">Denis Galetin IE</span>
+        <span class="ie-dates">December 2022 → Present</span>
+      </div>
+      <div class="ie-loc">Tbilisi, Georgia</div>
+      <div class="ie-sub">Individual Entrepreneur</div>
+      <div class="ie-contracts">
+        <div>
+          <div class="contract-company">Venson Ltd. <span style="font-weight:400;font-size:11px;color:#9ca3af;">· Cyprus · Service Contract</span></div>
+          <div class="contract-meta">July 2023 → Present</div>
+          <div class="contract-pos">Senior Backend Developer (PHP/Go)</div>
+          <ul class="ach">
+            <li>Led monolith-to-microservices migration: extracted deposits and withdrawals services, reducing deployment time from 2 hours to 15 minutes. Continuing architectural decomposition in a team of 5 backend developers</li>
+            <li>Design system architecture, document technical decisions, and conduct code reviews. Mentor 2 middle developers, help with architectural decisions</li>
+            <li>Develop payment APIs for financial services</li>
+            <li>Configure CI/CD pipelines to automate deployment and testing. Manage Kubernetes clusters on AWS for production workloads</li>
+            <li>Write unit and integration tests for critical services, set up monitoring and alerting. Achieved 99.8% uptime SLA for payment services through systematic reliability improvements and incident response processes</li>
+            <li>Optimize slow SQL queries: reduced reporting query execution time from 8 seconds to 200 ms, enabling real-time reports for 200k+ users</li>
+            <li>Refactor legacy code, apply SOLID principles and design patterns</li>
+            <li>Develop internal tools to automate team's routine tasks</li>
+          </ul>
+        </div>
+        <div>
+          <div class="contract-company">eLogy <span style="font-weight:400;font-size:11px;color:#9ca3af;">· Rome, Italy · Service Contract</span></div>
+          <div class="contract-meta">December 2022 → July 2023</div>
+          <div class="contract-pos">Senior Backend Developer (PHP/Go)</div>
+          <ul class="ach">
+            <li>Built backend for a logistics SaaS platform processing 5k+ orders daily. Team of 4 developers</li>
+            <li>Extracted authentication into a separate Go microservice</li>
+            <li>Normalized the database: migrated legacy tables without foreign keys to new schema with FK constraints</li>
+            <li>Implemented an alternative payments module with multiple provider integrations</li>
+            <li>Built push notifications microservice for shipment status with Firebase integration</li>
+            <li>Initiated PHP modernization (5.6 → 7.4): resolved 15k lines of technical debt, introduced strict typing and type hints. Established migration roadmap toward PHP 8.x</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="exp-entry">
+      <div class="exp-row">
+        <span class="exp-company">Albato</span>
+        <span class="exp-dates">June 2021 → December 2022</span>
+      </div>
+      <div class="exp-location">Setúbal, Portugal</div>
+      <div class="exp-position">PHP Developer (contract)</div>
+      <ul class="ach">
+        <li>Worked on integration platform backend connecting 200+ third-party services, processing 50k+ API requests daily for 3k+ active business clients</li>
+        <li>Built PHP worker system for asynchronous processing of CPU-intensive automation tasks, accelerated automation execution by 60% through parallelization</li>
+        <li>Optimized database architecture and slow queries, improving response times for critical endpoints</li>
+      </ul>
+    </div>
+    <div class="exp-entry">
+      <div class="exp-row">
+        <span class="exp-company">Paykassma</span>
+        <span class="exp-dates">February 2019 → June 2021</span>
+      </div>
+      <div class="exp-location">Worldwide</div>
+      <div class="exp-position">PHP Developer</div>
+      <ul class="ach">
+        <li>Worked across two product teams within Paykassma's company group over 2+ years: launched on the gateway product team, then moved to the core fintech platform - taking on broader ownership of payment infrastructure</li>
+        <li>Developed payment gateway backend with embeddable iframe widget; integrated multiple payment providers through a unified API gateway with retry and webhook notification system for payment statuses</li>
+        <li>Set up transaction table partitioning by dates: split a 50M+ record table into monthly partitions, automated archiving of data older than 6 months - eliminating performance degradation as data grew</li>
+        <li>Integrated payment gateway with multiple banks and processing centers; developed internal API for transactions and user balance management</li>
+        <li>Optimized SQL queries and database structure: refactored transactional queries, added indexes on frequently accessed fields, reduced response time from 2-3 seconds to 100-150 ms</li>
+        <li>Covered critical financial operations with tests, implemented automated e2e testing</li>
+        <li>Set up transaction monitoring and alerting for payment anomalies</li>
+        <li>Optimized payment processing pipeline: eliminated redundant logic and unnecessary DB round-trips, improving throughput under load</li>
+      </ul>
+    </div>
+    <div class="exp-entry">
+      <div class="exp-row">
+        <span class="exp-company">Freelance &amp; Startup Projects</span>
+        <span class="exp-dates">January 2017 → February 2019</span>
+      </div>
+      <div class="exp-position">Freelance PHP Developer</div>
+      <ul class="ach">
+        <li>Developed web applications and payment integrations for small businesses and startups</li>
+        <li>Worked directly with clients: gathered requirements, designed solutions, maintained launched projects</li>
+        <li>Managed full project lifecycle independently: provisioned Linux VPS environments, configured Nginx, MySQL, and PHP-FPM from scratch, handled deployments and production support</li>
+        <li>Participated in a startup project in the online payments space, gained first experience with high-load systems</li>
+      </ul>
+    </div>
+  </section>
+  <section>
+    <h2>Education</h2>
+    <div class="edu-entry">
+      <div class="edu-row">
+        <span class="edu-uni">North Caucasus Federal University</span>
+        <span class="edu-year">2016</span>
+      </div>
+      <div class="edu-loc">Stavropol, Russia</div>
+      <div class="edu-field">Information Security of Automated Systems</div>
+      <div class="edu-degree">Specialist Degree (5 years)</div>
+    </div>
+  </section>
+  <section>
+    <h2>Technical Skills</h2>
+    <div class="skills-wrap">
+      <span class="skill-tag">PHP</span>
+      <span class="skill-tag">Go</span>
+      <span class="skill-tag">MySQL</span>
+      <span class="skill-tag">PostgreSQL</span>
+      <span class="skill-tag">Redis</span>
+      <span class="skill-tag">Laravel</span>
+      <span class="skill-tag">Symfony</span>
+      <span class="skill-tag">REST APIs</span>
+      <span class="skill-tag">Microservices</span>
+      <span class="skill-tag">Docker</span>
+      <span class="skill-tag">Kubernetes</span>
+      <span class="skill-tag">CI/CD</span>
+      <span class="skill-tag">RabbitMQ</span>
+      <span class="skill-tag">AWS</span>
+      <span class="skill-tag">Azure</span>
+      <span class="skill-tag">Linux</span>
+    </div>
+  </section>
+  <section class="section-page-break">
+    <h2>Soft Skills</h2>
+    <div class="soft-grid">
+      <div>
+        <div class="soft-title">People &amp; Communication</div>
+        <div class="soft-desc">I keep communication transparent with teams and stakeholders, document decisions, and share status and risks clearly</div>
+      </div>
+      <div>
+        <div class="soft-title">Ownership &amp; Reliability</div>
+        <div class="soft-desc">I take ownership of service stability and outcomes. Reliability, predictability, and user trust are the priority</div>
+      </div>
+      <div>
+        <div class="soft-title">Organization &amp; Planning</div>
+        <div class="soft-desc">I plan work, estimate timelines and risks, and maintain a steady delivery cadence</div>
+      </div>
+      <div>
+        <div class="soft-title">Adaptability</div>
+        <div class="soft-desc">I quickly learn new technologies and adopt modern approaches when they improve product quality</div>
+      </div>
+    </div>
+  </section>
+</body>
+</html>

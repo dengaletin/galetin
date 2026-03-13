@@ -28,6 +28,9 @@ export default function About() {
                         <p className="mt-1 text-lg text-gray-600">
                             {t('role')}
                         </p>
+                        <p className="mt-0.5 text-sm text-gray-500">
+                            {t('experience')}
+                        </p>
                     </div>
                 </div>
                 
